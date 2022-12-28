@@ -2,18 +2,21 @@
 $exp = [
     [
         'name' => 'Front End Developer',
-        'time' => 'Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span>',
+        'dateStart' => 'Jan 2015',
+        'dateEnd' => 'Current',
         'comment' => 'Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.',
     ],
     [
         'name' => 'Web Developer / lalala.com',
-        'time' => 'Mar 2012 - Dec 2014',
+        'dateStart' => 'Mar 2012',
+        'dateEnd' => 'Dec 2014',
         'comment' => 'Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.',
         
     ],
     [
         'name' => 'Graphic Designer / дизигн.com',
-        'time' => 'Jun 2010 - Mar 2012',
+        'dateStart' => 'Jun 2010',
+        'dateEnd' => 'Mar 2012',
         'comment' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     ],
 ];
@@ -115,7 +118,16 @@ $exp = [
         <?php for ($i = 0; $i < count($exp); $i++):?>
           <div class="w3-container">
             <h5 class="w3-opacity"><b><?php echo $exp[$i]["name"];?></b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $exp[$i]["time"];?></h6>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+              <?php echo $exp[$i]["dateStart"];?> - 
+              <?php if ($i == 0): ?>
+                <span class="w3-tag w3-teal w3-round">
+                  <?=$exp[$i]['dateEnd'];?>
+                </span>
+              <?php else: ?>
+                <?=$exp[$i]['dateEnd'];?>
+              <?php endif; ?>
+            </h6>
             <p><?php echo $exp[$i]["comment"];?></p>
             <hr>
           </div>
