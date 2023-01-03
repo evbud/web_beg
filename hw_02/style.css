@@ -1,0 +1,26 @@
+html {
+    background-color: lightblue;
+}
+h1 {
+    color: blue;
+    font-family: 'CatskinDEMO-Regular', sans-serif;
+    text-align: center;
+}
+ul {
+    list-style-type: circle;
+}
+@font-face {
+	font-family: 'CatskinDEMO-Regular';
+	src: url('fonts/catskindemo-regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/catskindemo-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/catskindemo-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/catskindemo-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/catskindemo-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/catskindemo-regular.svg#catskindemo-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+.orange {
+    color: orange;
+}
+img {
+    width: 400px;
+}
